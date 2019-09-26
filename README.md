@@ -11,7 +11,14 @@ Head over to https://processing.org/ and download the IDE (Integrated Developmen
 
 ### Essentials
 
-#### Colors
-#### Basic shapes
+- Colors, fills strokes
+- Basic shapes 
+- - rectangle, ellipse
 #### Load images
+#### Typography
+
+### Essentials
+
+#### Load images
+
 
