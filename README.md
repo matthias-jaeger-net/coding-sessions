@@ -9,16 +9,33 @@ Preps and docs for my creative coding sessions in the atelier
 ### Setting up a basic Processing workspace 
 Head over to https://processing.org/ and download the IDE (Integrated Development Editor) for Processing.
 
-### Essentials
+### Essential properties
+- - size
+- - renderer
 
-- Colors, fills strokes
-- Basic shapes 
-- - rectangle, ellipse
-#### Load images
-#### Typography
+# Drawing Primitives
+- point
+- line
+- rectangle
+- triangle
+- ellipse
 
-### Essentials
+# Styling the colors
+- fill 
+- stroke
+- background
 
-#### Load images
+# Load images
+# Typography
+- text
+- textSize
+- loadFont
+- textFont
+
+### Save your files
+- save
+- - jpg 
+- - png
+- - pdf
 
 
