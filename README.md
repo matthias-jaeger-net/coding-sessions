@@ -8,3 +8,10 @@ Preps and docs for my creative coding sessions in the atelier
 
 ### Setting up a basic Processing workspace 
 Head over to https://processing.org/ and download the IDE (Integrated Development Editor) for Processing.
+
+### Essentials
+
+#### Colors
+#### Basic shapes
+#### Load images
+
