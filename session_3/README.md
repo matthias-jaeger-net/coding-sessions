@@ -1,7 +1,12 @@
-# Outline Session 3
+# Basic operations with Numbers and Strings in python
 
-# Basic operations with Numbers you can perform
-## Type any number, get the same number back
+#### Type any number, get the same number back
+```
+>>> 10
+10
+```
+
+#### Type a floating point number
 ```
 >>> 10
 10
