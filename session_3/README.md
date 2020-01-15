@@ -4,7 +4,8 @@
 ## Type any number, get the same number back
 ```
 >>> 10
-10```
+10
+```
 
 
 – Strings
