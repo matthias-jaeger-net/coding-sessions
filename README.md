@@ -1,7 +1,5 @@
 # coding-sessions
 Preps and docs for my creative coding sessions in the atelier
-
-# Session 1
 ![session](smiles.jpg)
 
 ## Working with the Processing IDE
