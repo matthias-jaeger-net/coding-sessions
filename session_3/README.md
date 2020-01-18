@@ -14,7 +14,7 @@ def setup():
   myImage = loadImage("file.jpg")
 
 def draw():
-  image(loadImage("file.jpg"), mouseX, mouseY)
+  image(myImage, mouseX, mouseY)
 ```
 
 
