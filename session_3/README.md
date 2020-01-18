@@ -3,7 +3,11 @@
 ### Loading and displaying an image
 ```python
 def setup():
-  size(800, 800)
+  # Same size as the source image
+  # https://unsplash.com/photos/mGy1Jjr2e6M
+  size(900, 600)
+  
+  # Load and display and position image
   image(loadImage("file.jpg"), 0, 0)
 ```
 
