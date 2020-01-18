@@ -1,9 +1,29 @@
-# Example 1 
- 
+# Example 2
+
+# Globally stored image
+myImage = None
+
 def setup():
-  # Set to the same size as the source image
-  # https://unsplash.com/photos/mGy1Jjr2e6M
-  size(900, 600)
-  
-  # Load and display and position the image
-  image(loadImage("file.jpg"), 0, 0)
+    
+    # Import the image
+    global myImage
+    
+    # Define the sketch format
+    size(900, 600)
+    
+    # Set the origin of the image to it's center
+    imageMode(CENTER)
+    
+    # Load the source image
+    # https://unsplash.com/photos/mGy1Jjr2e6M
+    myImage = loadImage("file.jpg")
+
+    # Skew the image to a small square
+    myImage.resize(100, 100)
+    
+    background(255)
+
+def draw():
+
+    # Attach the square to the mouse position
+    image(myImage, mouseX, mouseY)
