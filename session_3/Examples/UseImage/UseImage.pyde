@@ -21,6 +21,7 @@ def setup():
     # Skew the image to a small square
     myImage.resize(100, 100)
     
+    # Clear screen with white 
     background(255)
 
 def draw():
