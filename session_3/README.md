@@ -48,7 +48,7 @@ def draw():
 ```
 
 ### Working with pixels of an image
-![session](pixel.png)
+![session](pixels.png)
 
 ```python
 def setup():
