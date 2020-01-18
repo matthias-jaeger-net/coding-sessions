@@ -3,37 +3,32 @@
 ### Loading and displaying an image
 ```python
 def setup():
+  size(800, 800)
   image(loadImage("file.jpg"), 0, 0)
 ```
+
 ### Resize, store and use the image
 ```python
+# Globally stored image
 myImage = None
 
 def setup():
+  # Import the image
   global myImage
+  # Define the sketch format
+  size(800, 800)
+  # Load and resize the image
   myImage = loadImage("file.jpg")
+  myImage.resize(100, 100)
 
 def draw():
+  # Attach the image to the mouse position
   image(myImage, mouseX, mouseY)
 ```
 
-
-
-#### Type any number, get the same number back
+### Working with pixels of an image
+```python
+def setup():
+  size(800, 800)
+  image(loadImage("file.jpg"), 0, 0)
 ```
->>> 10
-10
-```
-
-#### Type a floating point number
-```
->>> 10
-10
-```
-
-
-– Strings
-– Variables
-– Lists
-– Functions
-– Conditionals
