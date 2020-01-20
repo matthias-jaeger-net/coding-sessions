@@ -1,80 +1,126 @@
-# 
-# RotationDraw.pyde
-# Generates a colorful visual by spinning a masked image
-# that is attached to the mouse position 
 #
+# RotationDraw.pyde
 # Matthias Jäger | MIT, 2020
 #
+# Generates a colorful visual by rotating a masked
+# source image attached to the mouse position.
+# Press the space bar to save an frame of the animation.
 
-# Global variables
+# GLOBAL VARIABLES
 
-# PGraphics objects 
-sourceImage = None 
-sourceBuffer = None 
-maskBuffer = None 
+# PGraphics objects, assigned in setup()
+sourceBuffer = None
+maskBuffer = None
 
-# Angle of rotation
-angle = 0.0 
+# Angle of rotation starts at 0
+angle = 0.0
 
-# Speed of rotation
-speed = 0.01 
+# Speed of rotation is slow
+speed = 0.01
 
+
+# CUSTOM FUNCTIONS
+
+# – The source image 
+#
+def createSourceBuffer(w, h, path):
+
+    # Load source image and skew it to fit (brutal)
+    img = loadImage(path)
+    img.resize(w, h)
+
+    # Create the source buffer width the image
+    buffer = createGraphics(w, h)
+    buffer.beginDraw()
+    buffer.image(img, 0, 0)
+    buffer.endDraw()
     
+    return buffer
 
-# Main program functions
 
+# - The masked image
+#
+def createMaskBuffer(w, h, n, r):
+    
+    # Create a PGraphicsbuffer 
+    buffer = createGraphics(w, h)
+    
+    # Wrapping all drawing inside beginDraw/endDraw
+    buffer.beginDraw()
+    
+    # Mask alpha settings 
+    # Black (0, 0, 0) –> tansparent
+    # White (255, 255, 255) -> opaque
+    buffer.background(0)
+    buffer.fill(255)
+    
+    # Create randomly positioned ellipses
+    for t in range(n):
+        x = random(w)
+        y = random(h)
+        buffer.ellipse(x, y, random(r), random(r))
+    
+    # End drawing to the buffer
+    buffer.endDraw()
+    
+    # Return the buffer
+    return buffer
+
+
+# PROCESSING FUNCTIONS
+
+# – setup() gets called once at program start
+#
 def setup():
+
     # Import globals variables
-    global sourceImage, sourceBuffer, maskBuffer
+    global sourceBuffer
 
     # Create a square canvas
     size(800, 800)
-    
+
+    # Set the origin of all images to the center (default CORNER)
+    imageMode(CENTER)
+
     # Clear the background with white
     background(255)
     
-    # Load source image and skew it to fit
-    # https://unsplash.com/photos/f5Fx_B3Qc4o
-    sourceImage = loadImage("image.jpg")
-    sourceImage.resize(width, height)
+    # Create a PGraphics buffer w x h, filled with a streched image 
+    sourceBuffer = createSourceBuffer(width, height, "image.jpg")
 
-    # Create the source buffer
-    
-    sourceBuffer = createGraphics(width, height)
-    sourceBuffer.beginDraw()
-    sourceBuffer.image(sourceImage, 0, 0)
-    sourceBuffer.endDraw()
-    
-    # Create the mask buffer
-    maskBuffer = createGraphics(width, height)
-    maskBuffer.beginDraw()
+    # Creat a PGraphics buffer with white ellipses on a black ground
+    maskBuffer = createMaskBuffer(width, height, 200, 20)
 
-    # Mask style settings
-    maskBuffer.background(0)
-    maskBuffer.fill(255)
-    
-    # Create a number of randomly positioned shapes
-    for n in range(950):
-        maskBuffer.ellipse(random(width), 
-                        random(height), 
-                        random(20), 
-                        random(20))
-    maskBuffer.endDraw()
-    
     # Apply the mask effect to the source buffer
     sourceBuffer.mask(maskBuffer)
-
-
-def draw():
-    global angle
-    noStroke()
-    imageMode(CENTER)
-    translate(mouseX, mouseY)
-    rotate(angle)
-    image(sourceBuffer, 0, 0)
-    angle += speed
     
+    
+# – draw() is looping until the program is ended
+#
+def draw():
 
+    # Import the global variables
+    global angle
+
+    # Relocate the origin (0, 0) to the mouse 
+    translate(mouseX, mouseY)
+    
+    # Rotate by the angle (gets increased later)
+    rotate(angle)
+    
+    # Render the finished source buffer in an image
+    image(sourceBuffer, 0, 0)
+    
+    # Increase the angle contiously
+    angle += speed
+
+
+# – keyPressed() used to save images, any key works
+#
 def keyPressed():
+    
     # HACK to get different names
-    save("out/"+str(random(1))+"RotationDraw.jpg")
+    hack = str(random(1)) 
+    
+    # Saves a jpg in the out folder
+    save("out/"+hack+"RotationDraw.jpg")
