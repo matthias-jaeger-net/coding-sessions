@@ -1,10 +1,13 @@
-#
 # RotationDraw.pyde
-# Matthias Jäger | MIT, 2020
 #
 # Generates a colorful visual by rotating a masked
 # source image attached to the mouse position.
-# Press the space bar to save an frame of the animation.
+# 
+# This example is a part of my coding session materials: 
+# https://github.com/matthias-jaeger-net/coding-sessions
+#
+# Matthias Jäger | MIT, 2020
+
 
 # GLOBAL VARIABLES
 
@@ -25,8 +28,10 @@ speed = 0.01
 #
 def createSourceBuffer(w, h, path):
 
-    # Load source image and skew it to fit (brutal)
+    # Load source image 
     img = loadImage(path)
+    
+    # Skew it to fit (brutal)
     img.resize(w, h)
 
     # Create the source buffer width the image
@@ -34,7 +39,8 @@ def createSourceBuffer(w, h, path):
     buffer.beginDraw()
     buffer.image(img, 0, 0)
     buffer.endDraw()
-    
+   
+    # Done, return the buffer 
     return buffer
 
 
@@ -54,7 +60,7 @@ def createMaskBuffer(w, h, n, r):
     buffer.background(0)
     buffer.fill(255)
     
-    # Create randomly positioned ellipses
+    # Randomly positioned ellipses
     for t in range(n):
         x = random(w)
         y = random(h)
@@ -63,7 +69,7 @@ def createMaskBuffer(w, h, n, r):
     # End drawing to the buffer
     buffer.endDraw()
     
-    # Return the buffer
+    # Done, return the buffer
     return buffer
 
 
@@ -79,7 +85,7 @@ def setup():
     # Create a square canvas
     size(800, 800)
 
-    # Set the origin of all images to the center (default CORNER)
+    # Set the origin of images to the center (default CORNER)
     imageMode(CENTER)
 
     # Clear the background with white
@@ -88,10 +94,10 @@ def setup():
     # Create a PGraphics buffer w x h, filled with a streched image 
     sourceBuffer = createSourceBuffer(width, height, "image.jpg")
 
-    # Creat a PGraphics buffer with white ellipses on a black ground
+    # Create a PGraphics buffer with 200 shapes and 20x20 maximum size
     maskBuffer = createMaskBuffer(width, height, 200, 20)
 
-    # Apply the mask effect to the source buffer
+    # Apply the mask to the source buffer
     sourceBuffer.mask(maskBuffer)
     
     
