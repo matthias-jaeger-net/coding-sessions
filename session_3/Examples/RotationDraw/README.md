@@ -1,10 +1,11 @@
 # RotationDraw.pyde
 
-> Generates a bold and colorful visual by rotating a masked source image attached to the mouse position. 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+This example is using Processing's python mode, graphics buffers, alpha masks and a jpg image to create a bold and colorful visual on the screen, that can be saved as a file. 
 
 ![session](out/0.118021726608RotationDraw.jpg)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # Idea of the program
 The program loads the pixels of a given image into a graphics buffer, then applies an alpha mask with a large number of randomly placed white shapes on a black background, leaving only parts of the original image visible. Not calling ``background(255)`` inside of the draw loop traces a colorful path around the mouse position.
