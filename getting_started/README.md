@@ -9,7 +9,7 @@
 ### Install the Python Mode
 ![session](install_mode_1.jpg)
 - Click the language selection dropdown and choose ``Add mode``
-![session](install_mode_2.jpg)
+![session](install_mode_2.png)
 - Pick 'Python Mode for Processing 3' and click 'Install'
 
 ### Install the Python Programming language on your system
