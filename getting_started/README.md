@@ -19,3 +19,14 @@
 - Mac: ``touch file.txt``
 - Win: ``l``
 - Mac: ``touch file.txt``
+
+# Warm up with a few simple sketches 
+- Write a program that prints "Hello World" 
+```python
+print("hello world")
+```
+- Write a program that creates a 800 by 600 sceen  
+```python
+def setup():
+    size(800, 600)
+```
