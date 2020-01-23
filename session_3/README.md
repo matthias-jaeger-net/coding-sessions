@@ -1,4 +1,30 @@
-# Basic operations with images in Processing
+# Working with Processing's python mode
+
+
+### Numbers ... 
+```python
+# You can print a number
+print(10)
+# >>>10
+
+# You can store a number, then print it
+a = 10
+print(a)
+# >>>10
+
+# You can increase the number by 1
+a = a + 1
+print(a)
+# >>>11
+ 
+```
+
+### Numbers ... 
+```python
+# 
+```
+
+# Basics of images
 
 ### Loading and displaying an image
 ![session](load.png)
