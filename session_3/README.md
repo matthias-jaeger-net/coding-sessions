@@ -5,18 +5,39 @@
 ```python
 # You can print a number
 print(10)
-# >>>10
 
-# You can store a number, then print it
-a = 10
-print(a)
-# >>>10
+# You can add numbers
+print(10 + 10)
 
-# You can increase the number by 1
-a = a + 1
-print(a)
-# >>>11
- 
+# You can subtract numbers
+print(10 - 10)
+
+# You can do multiplications
+print(10 * 10)
+
+# You can do divisions
+print(10 / 10)
+
+# You even can do divisions, but here we first notice the
+# difference between integer and float number
+print(1 / 10.0) # 0.1
+print(1 / float(10)) # 0.1 – one is converted to float
+print(1 / 10) # 0
+
+# You can also print text (string)
+print("Hello World")
+# Hello  World
+
+# You can add strings together
+print("Puff" + " " + "Daddy")
+# Puff Daddy
+
+# You can not subtract strings
+#print("Hello" - "  World")
+
+# You can however multiply strings with numbers 
+print(" :) " * 10)
+#  :)  :)  :)  :)  :)  :)  :)  :)  :)  :) 
 ```
 
 ### Numbers ... 
