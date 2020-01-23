@@ -1,7 +1,7 @@
 # Working with Processing's python mode
 
 
-### Numbers ... 
+### Numbers
 ```python
 # You can print a number
 print(10)
@@ -18,32 +18,43 @@ print(10 * 10)
 # You can do divisions
 print(10 / 10)
 
-# You even can do divisions, but here we first notice the
-# difference between integer and float number
+# You even can do divisions, but here we first notice the difference between integer and float numbers
 print(1 / 10.0) # 0.1
-print(1 / float(10)) # 0.1 – one is converted to float
+print(1 / float(10)) # 0.1 converted to floating point number
 print(1 / 10) # 0
+```
 
+### Text
+```python
 # You can also print text (string)
 print("Hello World")
-# Hello  World
 
 # You can add strings together
 print("Puff" + " " + "Daddy")
-# Puff Daddy
 
-# You can not subtract strings
-#print("Hello" - "  World")
+# You can not subtract or divide strings
+# TypeError > print("Hello" - "  World")
+# TypeError > print("Hello" / "  World")
 
-# You can however multiply strings with numbers 
+# You can however multiply strings with integer numbers 
 print(" :) " * 10)
 #  :)  :)  :)  :)  :)  :)  :)  :)  :)  :) 
 ```
 
-### Numbers ... 
+### Variables ... 
 ```python
-# 
+# You can give names to to stored numbers or texts
+a = 10
+print(a)
+
+# You can modify the stored number
+a = a + 1
+print(a)
+
+
 ```
+
+
 
 # Basics of images
 
