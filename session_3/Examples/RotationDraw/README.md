@@ -2,9 +2,12 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This example is using Processing's python mode, graphics buffers, alpha masks and a jpg image to create a bold and colorful visual on the screen, that can be saved as a file. 
+This example is using Processing's python mode, graphics buffers, alpha masks and a jpg image to create a bold and colorful visual on the screen, that can be saved as a file.
 
+# Images I rendered with the program
 ![session](out/0.118021726608RotationDraw.jpg)
+![session](out/0.426154911518RotationDraw.jpg)
+![session](out/0.602572441101RotationDraw.jpg)
 
 
 # Idea of the program
@@ -13,7 +16,7 @@ The program loads the pixels of a given image into a graphics buffer, then appli
 
 
 ## Learning goals
-- Learn to load, resize and display images in Processing 
-- Learn to create graphics buffers and apply alpha masks 
+- Learn to load, resize and display images in Processing
+- Learn to create graphics buffers and apply alpha masks
 - Learn to animate the masked image in draw
-- Learn save the images you draw 
+- Learn save the images you draw
