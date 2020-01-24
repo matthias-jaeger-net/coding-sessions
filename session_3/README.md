@@ -36,12 +36,12 @@ print("Puff" + " " + "Daddy")
 # TypeError > print("Hello" - "  World")
 # TypeError > print("Hello" / "  World")
 
-# You can however multiply strings with integer numbers 
+# You can however multiply strings with integer numbers
 print(" :) " * 10)
-#  :)  :)  :)  :)  :)  :)  :)  :)  :)  :) 
+#  :)  :)  :)  :)  :)  :)  :)  :)  :)  :)
 ```
 
-### Variables ... 
+### Variables ...
 ```python
 # You can give names to to stored numbers or texts
 a = 10
@@ -59,7 +59,6 @@ print(a)
 # Basics of images
 
 ### Loading and displaying an image
-![session](load.png)
 
 ```python
  def setup():
@@ -71,9 +70,9 @@ print(a)
     # Load and display and position the image
     image(loadImage("file.jpg"), 0, 0)
 ```
+![session](load.png)
 
 ### Resize, store and use the image
-![session](use.png)
 ```python
 # Globally stored image
 myImage = None
@@ -105,8 +104,9 @@ def draw():
     image(myImage, mouseX, mouseY)
 ```
 
+![session](use.png)
+
 ### Working with pixels of an image
-![session](pixels.png)
 
 ```python
 def setup():
@@ -137,3 +137,4 @@ def setup():
                 pixels[index] = current
     updatePixels()
 ```
+![session](pixels.png)
