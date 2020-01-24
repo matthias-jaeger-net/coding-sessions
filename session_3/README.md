@@ -1,4 +1,32 @@
-# Working with Processing's python mode
+# Creating a visual artwork with code
+
+## Session Goals
+- Be able to write processing sketches like this one
+- - https://github.com/matthias-jaeger-net/coding-sessions/tree/master/session_3/Examples/RotationDraw
+- Understand basic concepts of programming (/w python)
+- - Variables can be numbers or text
+- - - Understand: (Integer/Float) and String
+- - With operators you can
+- - - Add, subtract, divide and multiply numbers
+- - Expressions
+- - - Add up variables and operators to more complex expressions
+- - Comparisons
+- - - True, False
+- - - Equals
+- - - Is greater than
+- - - Is lower than
+- - - Is ... and ...
+- - - Is ... or ...
+- - Control structures
+- - - If / Else / Else if
+- - Create reusable blocks of code with Functions
+- - - Void function
+- - - Returning function
+- - Ways of grouping data
+- - Lists
+
+
+
 
 
 ### Numbers
